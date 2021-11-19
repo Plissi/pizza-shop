@@ -17,9 +17,14 @@ class Pizzaform extends Component
     public function submit()
     {
         $this -> validate([
-            'photo'=>'required'
+            'name' => 'required',
+            'description' => 'required',
+            'prix1' => 'numeric',
+            'prix2' => 'numeric',
+            'prix3' => 'numeric',
+            'photo'=>'required|image'
         ]);
-        dd($this);
+        //dd($this);
 
         Menu::create();
 
