@@ -5,9 +5,12 @@ namespace App\Http\Controllers;
 use App\Models\Menu;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Livewire\WithPagination;
 
 class MenuController extends Controller
 {
+    use WithPagination;
+
     /**
      * Display a listing of the resource.
      *
@@ -15,7 +18,7 @@ class MenuController extends Controller
      */
     public function index()
     {
-        $menu = Menu::all();
+        $menu = Menu::paginate(10);
         $user = Auth::user();
         
         return view('menu.index', compact(['menu', 'user']));
