@@ -2,18 +2,18 @@
 
 @section('title', 'Menu')
 
-<div class="flex flex-col justify-center min-h-screen py-12 bg-yellow-50 sm:px-6 lg:px-8">
+<div class="flex flex-col justify-center min-h-screen py-12 mx-auto bg-yellow-50 sm:px-6 lg:px-8">
     <x-top-bar />
-    <div class="grid w-full gap-4 mx-auto sm:grid-cols-none md:grid-cols-2 lg:grid-cols-5">
+    <div class="grid gap-4 mx-auto sm:grid-cols-none lg:grid-cols-5">
         <x-side-menu />
         <div class="mx-1 lg:col-span-3">
-            <div class="sm:mx-auto sm:w-full sm:max-w-md">
-                <h2 class="mt-6 text-3xl font-extrabold leading-9 text-center text-yellow-900">
+            <div class="sm:mx-auto sm:w-full sm:max-w-md md:max-w-none">
+                <h2 class="mt-6 font-serif text-3xl font-extrabold leading-9 text-center text-yellow-900">
                     Menu
                 </h2>
             </div>
         
-            <div class="mt-8 sm:mx-auto sm:w-full">
+            <div class="max-w-xs mt-8 sm:mx-auto sm:w-full md:max-w-none">
                 <div class="px-4 py-8 bg-white rounded-lg shadow sm:px-10">
                     @if ( count($menu) == 0)
                         <div class="text-center">
@@ -28,10 +28,10 @@
                                     <table class="min-w-full divide-y divide-yellow-200">
                                         <thead class="bg-yellow-50">
                                         <tr>
-                                            <th scope="col" class="px-6 py-3 text-xs font-medium tracking-wider text-left text-yellow-500 uppercase">
+                                            <th scope="col" class="px-6 py-3 text-xs font-medium tracking-wider text-center text-yellow-500 uppercase">
                                                 Pizza
                                             </th>
-                                            <th scope="col" class="px-6 py-3 text-xs font-medium tracking-wider text-left text-yellow-500 uppercase">
+                                            <th scope="col" class="px-6 py-3 text-xs font-medium tracking-wider text-center text-yellow-500 uppercase">
                                                 Description
                                             </th>
                                             @if ($user->is_admin)
