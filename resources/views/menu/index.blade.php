@@ -36,7 +36,7 @@
                                             </th>
                                             @if ($user->is_admin)
                                                 <th scope="col" class="relative px-6 py-3">
-                                                    <span class="sr-only">Edit</span>
+                                                    <span class="sr-only">Actions</span>
                                                 </th>
                                             @endif
                                         </tr>
@@ -65,7 +65,14 @@
                                             </td>
                                             @if ($user -> is_admin)
                                                 <td class="px-6 py-4 text-sm font-medium text-right whitespace-nowrap">
-                                                    <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+                                                    <a href="#1" class="px-1 text-indigo-600 hover:text-indigo-900 has-tooltip">
+                                                        <span class='p-1 -mt-8 text-indigo-900 transition bg-gray-100 rounded shadow-lg tooltip'>Edit</span>
+                                                        <x-sui-pen class="inline-block w-5 py-4"/>
+                                                    </a>
+                                                    <a href="#2" class="px-1 text-red-600 hover:text-red-900 has-tooltip">
+                                                        <span class='p-1 -mt-8 text-red-900 bg-gray-100 rounded shadow-lg tooltip'>Delete</span>
+                                                        <x-monoicon-delete class="inline-block w-5 py-4"/>
+                                                    </a>
                                                 </td>
                                             @endif
                                         </tr>
